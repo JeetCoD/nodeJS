@@ -14,7 +14,13 @@ router.post("/add-product", (req, res, next) => {
 
 router.get("/add-product", (req, res, next) => {
   // res.sendFile(path.join(rootDir, "views", "add-product.html"));
-  res.render("add-product", { docTitle: "Add Product" });
+  res.render("add-product", {
+    docTitle: "Add Product",
+    path: "/admin/add-product",
+    formCSS: true,
+    productCSS: true,
+    activeAddProduct: true,
+  });
 });
 
 // module.exports = router;
